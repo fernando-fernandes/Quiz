@@ -3,16 +3,18 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://kit.fontawesome.com/9f5ac3e4a0.js" crossorigin="anonymous"></script>
-  </head>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-        <link rel="stylesheet" href="assets/css/index.css">
+        <meta name="theme-color" content="#114FA8">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="fonts/css/all.min.css">  
+        <link rel="stylesheet" href="css/styles.min.css">    
+        <!-- <link rel="stylesheet" href="assets/css/index.css"> -->
         <title>Quiz</title>
 
     </head>
 
     <?php
-        include_once 'open_db.php';  
+        /*include_once 'open_db.php';  
         $id = 1;  
         $sql = "select * from tracking where id_usuario = ".$id;
         $result = mysqli_query($conn, $sql);
@@ -25,7 +27,7 @@
             $sql = "insert into tracking (id_usuario, m0_status, m1_status, e1_status, e1_id_questao_quizz, m3_status) values ".
             "(".$id.", 'A','A','F',0,'F')";
             $result = mysqli_query($conn, $sql);
-        }
+        }*/
     ?>
 
     <body>
@@ -57,50 +59,50 @@
             <div class="col-9 quizSection d-flex justify-content-center">
                 <div class="quizCard shadow ">
                     <?php                                        
-                        $par = $_GET["p"];
-                        switch ($par) {
-                            case "m0":
-                                include_once("home.html");
-                                break;
-                            case "m1":
-                                include_once("mod1.php");
-                                break;
-                            case "m1a":
-                                include_once("mod1a.php");
-                                break;                                
-                            case "m2":
-                                include_once("mod2.php");
-                                break;
-                            case "m2a":
-                                include_once("mod2a.php");
-                                break;                                
-                            case "e1":
-                                include_once("extra1.php");
-                                break;
-                            case "e1a":
-                                include_once("quizz.php");
-                                break;
-                            case "e1f":
-                                include_once("quizz-feedback.php");
-                                break;
-                            case "e1q":
-                                include_once("quizz-quadro.php");
-                                break;
-                            case "m3":
-                                include_once("mod3.html");
-                                break;
-                            default:
-                                include_once("home.html");
-                                break;
-                        }
+                        // $par = $_GET["p"];
+                        // switch ($par) {
+                        //     case "m0":
+                        //         include_once("home.html");
+                        //         break;
+                        //     case "m1":
+                        //         include_once("mod1.php");
+                        //         break;
+                        //     case "m1a":
+                        //         include_once("mod1a.php");
+                        //         break;                                
+                        //     case "m2":
+                        //         include_once("mod2.php");
+                        //         break;
+                        //     case "m2a":
+                        //         include_once("mod2a.php");
+                        //         break;                                
+                        //     case "e1":
+                        //         include_once("extra1.php");
+                        //         break;
+                        //     case "e1a":
+                        //         include_once("quizz.php");
+                        //         break;
+                        //     case "e1f":
+                        //         include_once("quizz-feedback.php");
+                        //         break;
+                        //     case "e1q":
+                        //         include_once("quizz-quadro.php");
+                        //         break;
+                        //     case "m3":
+                        //         include_once("mod3.html");
+                        //         break;
+                        //     default:
+                        //         include_once("home.html");
+                        //         break;
+                        // }
                     ?>
                 </div>
             </div>
         </div>
 
 
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <script src="js/jquery-3.5.1.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/main.js"></script>
     </body>
 </html>
