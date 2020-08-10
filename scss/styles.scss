@@ -3,15 +3,144 @@
 
 html, body {
     height: 100%;
-    font-size: 13px;
+    font-size: 16px;
+    background: $body;
+    font-family: $fonte-regular;
+}
+
+@mixin icon ($color, $background, $fontSize, $iconSize) {
+    width: $iconSize;
+    height: $iconSize;
+    margin: 0 1rem 0 -#{$iconSize / 2};
+    color: $color;
+    background: $background;
+    line-height: $iconSize;
+    font-size: $fontSize;
+    text-align: center;
+    border-radius: $iconSize / 2;
 }
 
 
-.containerMenu {
+.sidebar {
+    padding: 0;
 
+    $logo-height: 4.5rem;
+
+    .logo {
+        display: flex;
+        margin: 0 auto;
+        background: #fff;
+        justify-content: center;
+        height: $logo-height;
+    
+        img{
+            width: 9em;
+        }
+    }
+    
+    .container-menu {
+        background: linear-gradient(180deg, #114FA8 0%, #1551A9 100%);
+        height: calc(100vh - #{$logo-height});
+        overflow-y: auto;
+        display: flex;
+        flex-wrap: wrap;
+    
+        ul {
+            width: 60%;
+            padding: 0;
+            margin: 1.5rem 0;
+            list-style-type: none;
+            border-left: solid 2px #2D39A5;
+
+            li {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                margin-bottom: 1.2rem;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                &.nav-item {
+                    i {
+                        @include icon($amarelo, #2865BC, 1.1rem, 2.6rem);
+                    }
+
+                    span {
+                        text-transform: uppercase;
+                    }
+                }
+
+                &.nav-subitem {
+                    i {
+                        @include icon(rgba(255, 255, 255, .7), #1B4C95, .9rem, 2.1rem);
+                    }
+                }
+
+                a {
+                    color: #fff;
+                    outline: none;
+                    text-decoration: none;
+                    font-family: $fonte-semibold;
+                    font-size: .9rem;
+
+                    span {
+                        transition:  $transition;
+                    }
+
+                    &:hover span {
+                        opacity: 1;
+                        color: $amarelo;
+                    }
+
+                    &.sublink {
+                        margin-left: 2rem;
+                        font-size: .85rem;
+                        font-family: $fonte-regular;
+                    }
+                }
+
+                .icon-lock {
+                    display: none;
+                }
+
+                &.nav-disabled {
+                    i {
+                        color: rgba(255, 255, 255, .45) !important;
+                    }
+
+                    a {
+                        cursor: default;
+
+                        span,
+                        &:hover span{
+                            color: rgba(255, 255, 255, .45) !important;
+                        }
+                    }
+
+                    .icon-default {
+                        display: none;
+                    }
+
+                    .icon-lock {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
 }
 
 
+.quizCard {
+    background: $bg-quiz-1;
+    padding: 2rem;
+    min-height: 80vh;
+    width: 90%;
+    box-shadow: $sombra-quiz;
+    border-radius: .4rem;
+}
 
 
 // Small devices (landscape phones, 576px and up)

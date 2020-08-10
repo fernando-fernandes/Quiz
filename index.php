@@ -33,40 +33,133 @@
 
 <body>
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-12 col-md-3">
+        <!-- <div class="row">
+            <div class="col-12 col-md-3 logo">
                 <img src="images/Logo-mobile.svg" alt="">
             </div>
-        </div>
+        </div> -->
 
         <div class="row">
-            <div class="col-12 col-md-3">
+            <div class="col-12 col-md-3 sidebar">
                 <!-- <div class="logo d-flex justify-content-center">
                     <img src="assets/img/logo_mobil.png" width="50%" alt="" srcset="">
                 </div> -->
-                <div class="containerNav d-flex justify-content-center">
+                <a href="" class="logo">
+                    <img src="images/Logo-mobile.svg" alt="Logo Mobil">
+                </a>
+
+                <div class="container-menu d-flex justify-content-center">
                     <ul>
-                        <li><?= $m0_icone ?><a href="index.php?p=m0"> Home</a></li>
-                        <li><?= $m1_icone ?><a href="index.php?p=m1"> Módulo 1</a></li>
-                        <li><?= $m2_icone ?><a href="index.php?p=m2"> Módulo 2</a></li>
-                        <li><?= $e1_icone ?><a href="index.php?p=e1"> Atividade Extra</a></li>
-                        <li><?= $m3_icone ?><a href="index.php?p=m3"> Módulo 3</a></li>
-                        <li><i class="fas fa-lock ml-3"></i><a href=""> 1a Revisao</a></li>
-                        <li><i class="fas fa-lock ml-3"></i><a href=""> Módulo 4</a></li>
-                        <li><i class="fas fa-lock ml-3"></i><a href=""> Atividade Extra</a></li>
-                        <li><i class="fas fa-lock ml-3"></i><a href=""> Módulo 5</a></li>
-                        <li><i class="fas fa-lock ml-3"></i><a href=""> Módulo 6</a></li>
-                        <li><i class="fas fa-lock ml-3"></i><a href=""> 2a Revisão</a></li>
-                        <li><i class="fas fa-lock ml-3"></i><a href=""> Módulo 7</a></li>
-                        <li><i class="fas fa-lock ml-3"></i><a href=""> Módulo 8</a></li>
-                        <li><i class="fas fa-lock ml-3"></i><a href=""> Revisão final</a></li>
-                        <li><a href="">Ranking</a></li>
+                        <li class="nav-item">
+                            <a href="index.php?p=m0">
+                                <i class="fas fa-home icon-defult"></i>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="index.php?p=m1">
+                                <i class="fas fa-motorcycle icon-defult"></i>
+                                <i class="fas fa-lock icon-lock"></i>
+                                <span>Módulo 1</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="index.php?p=m2">
+                                <i class="fas fa-motorcycle icon-default"></i>
+                                <i class="fas fa-lock icon-lock"></i>
+                                <span>Módulo 2</span>
+                            </a>
+                        </li>
+                        <li class="nav-subitem">
+                            <a href="index.php?p=e1">
+                                <i class="fas fa-flag-alt icon-default"></i>
+                                <i class="fas fa-lock icon-lock"></i>
+                                <span>Atividade extra</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="index.php?p=m3">
+                            <i class="fas fa-motorcycle icon-default"></i>
+                                <i class="fas fa-lock icon-lock"></i>
+                                <span>Módulo 3</span>
+                            </a>
+                        </li>
+                        <li class="nav-subitem">
+                            <a href="">
+                                <i class="fas fa-traffic-cone icon-default"></i>
+                                <i class="fas fa-lock icon-lock"></i>
+                                <span>1<sup>a</sup> Revisão</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="">
+                            <i class="fas fa-motorcycle icon-default"></i>
+                                <i class="fas fa-lock icon-lock"></i>
+                                <span>Módulo 4</span>
+                            </a>
+                        </li>
+                        <li class="nav-subitem">
+                            <a href="">
+                                <i class="fas fa-flag-alt icon-default"></i>
+                                <i class="fas fa-lock icon-lock"></i>
+                                <span>Atividade extra</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="">
+                                <i class="fas fa-motorcycle icon-default"></i>
+                                <i class="fas fa-lock icon-lock"></i>
+                                <span>Módulo 5</span>
+                            </a>
+                        </li>
+                        <li class="nav-item nav-disabled">
+                            <a href="">
+                                <i class="fas fa-motorcycle icon-default"></i>
+                                <i class="fas fa-lock icon-lock"></i>
+                                <span>Módulo 6</span>
+                            </a>
+                        </li>
+                        <li class="nav-subitem nav-disabled">
+                            <a href=""><i class="fas fa-traffic-cone icon-default"></i>
+                            <i class="fas fa-lock icon-lock"></i>
+                            <span>2<sup>a</sup> Revisão</span></a>
+                            <a class="sublink" href=""><span>Podcast</span></a>
+                            <a class="sublink" href=""><span>Game case</span></a>
+                        </li>
+                        <li class="nav-item nav-disabled">
+                            <a href="">
+                                <i class="fas fa-motorcycle icon-default"></i>
+                                <i class="fas fa-lock icon-lock"></i>
+                                <span>Módulo 7</span>
+                            </a>
+                        </li>
+                        <li class="nav-item nav-disabled">
+                            <a href="">
+                                <i class="fas fa-motorcycle icon-default"></i>
+                                <i class="fas fa-lock icon-lock"></i>
+                                <span>Módulo 8</span>
+                            </a>
+                        </li>
+                        <li class="nav-subitem nav-disabled">
+                            <a href="">
+                                <i class="fas fa-traffic-cone icon-default"></i>
+                                <i class="fas fa-lock icon-lock"></i>
+                                <span>Revisão final</span>
+                            </a>
+                        </li>
+                        <li class="nav-item nav-disabled">
+                            <a href="">
+                                <i class="fas fa-trophy icon-default"></i>
+                                <i class="fas fa-lock icon-lock"></i>
+                                <span>Ranking</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
 
-            <div class="col-12 col-md-9 quizSection d-flex justify-content-center">
-                <div class="quizCard shadow ">
+            <div class="col-12 col-md-9 d-flex justify-content-center align-items-center">
+                <div class="quizCard">
                     <?php
                     // $par = $_GET["p"];
                     // switch ($par) {
