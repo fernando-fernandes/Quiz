@@ -21,13 +21,25 @@ body {
     border-radius: $iconSize / 2;
 }
 
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+
 .sidebar {
     padding: 0;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
+    transition: all 0.3s;
     $logo-height: 4.5rem;
+    overflow-y: auto;
 
     .logo {
         display: flex;
-        margin: 0 auto;
         background: #fff;
         justify-content: center;
         height: $logo-height;
@@ -39,10 +51,10 @@ body {
 
     .container-menu {
         background: linear-gradient(180deg, #114fa8 0%, #1551a9 100%);
-        height: calc(100vh - #{$logo-height});
-        overflow-y: auto;
-        display: flex;
-        flex-wrap: wrap;
+        // height: calc(100vh - #{$logo-height});
+        // overflow-y: auto;
+        // display: flex;
+        // flex-wrap: wrap;
 
         ul {
             width: 60%;
@@ -131,6 +143,15 @@ body {
     }
 }
 
+.content {
+    width: calc(100% - 250px);
+    padding: 40px;
+    min-height: 100vh;
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
 
 
 .quizCard {
@@ -142,7 +163,7 @@ body {
     width: 90%;
     box-shadow: $sombra-quiz;
     border-radius: 0.4rem;
-    margin: 3rem 0;
+    margin: 1rem 0;
 
     .title-card {
         background: #fff;
