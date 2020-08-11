@@ -6,7 +6,7 @@
     $cinza-1: #B5B5B5;
     $cinza-2: #5A5A5A;
     $bg-quiz-1:  #fff;
-    $bg-quiz-2: gradient(75.71% 120% at 38.16% 50.05%, #5F83B6 0%, #0C479D 100%), #0C479D;
+    $bg-quiz-2: url('../images/bg-mapa.png'), radial-gradient(75.71% 120% at 38.16% 50.05%, #5F83B6 0%, #0C479D 100%);
     $sombra-quiz: 2px 2px 30px -10px rgba(0, 0, 0, 0.2);
     $body: #f0f2f6;
 
