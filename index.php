@@ -151,7 +151,7 @@
         </div>
 
         <div class="content d-flex justify-content-center align-items-center">
-            <div class="quizCard">
+            <div class="quizCard quizCard-light">
                 <div class="title-card">
                     <h1>Título do Quiz</h1>
                     <div class="logo-card">
