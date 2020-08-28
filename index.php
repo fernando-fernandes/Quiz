@@ -223,42 +223,42 @@
                     </div>
                 </div>
                 <?php
-                // $par = $_GET["p"];
-                // switch ($par) {
-                //     case "m0":
-                //         include_once("home.html");
-                //         break;
-                //     case "m1":
-                //         include_once("mod1.php");
-                //         break;
-                //     case "m1a":
-                //         include_once("mod1a.php");
-                //         break;                                
-                //     case "m2":
-                //         include_once("mod2.php");
-                //         break;
-                //     case "m2a":
-                //         include_once("mod2a.php");
-                //         break;                                
-                //     case "e1":
-                //         include_once("extra1.php");
-                //         break;
-                //     case "e1a":
-                //         include_once("quizz.php");
-                //         break;
-                //     case "e1f":
-                //         include_once("quizz-feedback.php");
-                //         break;
-                //     case "e1q":
-                //         include_once("quizz-quadro.php");
-                //         break;
-                //     case "m3":
-                //         include_once("mod3.html");
-                //         break;
-                //     default:
-                //         include_once("home.html");
-                //         break;
-                // }
+                $par = $_GET["p"];
+                switch ($par) {
+                    case "m0":
+                        include_once("home.html");
+                        break;
+                    case "m1":
+                        include_once("index-sb.html");
+                        break;
+                    case "m1a":
+                        include_once("mod1a.php");
+                        break;                                
+                    case "m2":
+                        include_once("mod2.php");
+                        break;
+                    case "m2a":
+                        include_once("mod2a.php");
+                        break;                                
+                    case "e1":
+                        include_once("extra1.php");
+                        break;
+                    case "e1a":
+                        include_once("quizz.php");
+                        break;
+                    case "e1f":
+                        include_once("quizz-feedback.php");
+                        break;
+                    case "e1q":
+                        include_once("quizz-quadro.php");
+                        break;
+                    case "m3":
+                        include_once("mod3.html");
+                        break;
+                    default:
+                        include_once("home.html");
+                        break;
+                }
                 ?>
             </div>
         </div>
