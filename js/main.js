@@ -21,3 +21,22 @@
         }
     })();
         
+
+
+    // Km conquistados
+    $('.km-number').each(function(){
+           
+      var $el = $(this),
+        text = $el.text(),
+        len = text.length,
+        newCont = '';
+      
+      for(var i=0; i<len; i++){
+        newCont += '<span>'+ text.charAt(i) +'</span>';
+      }
+      
+      $el.html(newCont);
+           
+    });
+    
+    

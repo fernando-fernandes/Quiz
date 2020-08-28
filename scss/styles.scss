@@ -8,7 +8,6 @@ body {
     font-family: $fonte-regular;
 }
 
-
 body {
     position: relative;
 }
@@ -30,21 +29,21 @@ body {
     width: 100%;
 }
 
-.sidebar-btn{
+.sidebar-btn {
     position: absolute;
     top: 1.8rem;
-    left: .2em;
+    left: 0.2em;
     border: none;
     background: none;
     font-size: 1.5em;
     color: $cinza-1;
     z-index: 99;
 
-    &:active, &:focus {
+    &:active,
+    &:focus {
         outline: none;
     }
 }
-
 
 .sidebar {
     padding: 0;
@@ -71,7 +70,6 @@ body {
         img {
             width: 6em;
         }
-
     }
 
     .container-menu {
@@ -139,7 +137,7 @@ body {
                     .icon-lock {
                         display: none;
                     }
-    
+
                     &.nav-disabled {
                         cursor: default;
 
@@ -154,14 +152,12 @@ body {
                         .icon-default {
                             display: none;
                         }
-    
+
                         .icon-lock {
                             display: inline-block;
                         }
                     }
                 }
-
-                
             }
         }
     }
@@ -191,7 +187,6 @@ body {
     display: flex;
     justify-content: center;
 }
-
 
 .quizCard {
     background-image: $bg-quiz-2;
@@ -246,7 +241,7 @@ body {
 
         .question {
             color: #fff;
-            font-size: .95em;
+            font-size: 0.95em;
             line-height: 1.3;
             margin-bottom: 2rem;
         }
@@ -258,7 +253,7 @@ body {
 
         .custom-control-label::before,
         .custom-control-label::after {
-            top: 0
+            top: 0;
         }
 
         .custom-control {
@@ -270,10 +265,10 @@ body {
             border: 1px solid #d8d8d8;
             box-sizing: border-box;
             box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.25);
-            padding: .8rem 1rem;
-            border-radius: .3rem;
-            margin: .7rem 0;
-            font-size: .9rem;
+            padding: 0.8rem 1rem;
+            border-radius: 0.3rem;
+            margin: 0.7rem 0;
+            font-size: 0.9rem;
             vertical-align: middle;
             line-height: 1.2;
         }
@@ -289,26 +284,26 @@ body {
 
             p {
                 color: #fff;
-                font-size: .8em;
+                font-size: 0.8em;
                 line-height: 1.1;
             }
         }
 
         .btn {
-            background: #EBEBEB;
+            background: #ebebeb;
             border-radius: 5rem;
             padding: 0;
             font-family: $fonte-semibold;
-            font-size: .85em;
+            font-size: 0.85em;
             height: 2rem;
             padding: 0 1rem;
             transition: $transition;
             color: $azul;
-            border: solid 1px #EBEBEB;
-            letter-spacing: .032rem;
+            border: solid 1px #ebebeb;
+            letter-spacing: 0.032rem;
 
             &:hover {
-                opacity: .8;
+                opacity: 0.8;
             }
 
             &.btn-check {
@@ -334,23 +329,22 @@ body {
 
         .title-card {
             background: $azul;
-    
+
             h1 {
                 color: #fff;
             }
-    
+
             .logo-card {
                 background: #e4ecf9;
             }
         }
 
         .body-card {
-    
             .number {
                 background: $vermelho;
                 color: #fff;
             }
-    
+
             .question {
                 color: #333;
             }
@@ -363,22 +357,21 @@ body {
             .custom-control-label {
                 color: #fff;
             }
-    
+
             .feedback {
                 margin: 1.8rem 0 0;
                 font-family: $fonte-semibold;
-    
+
                 h4 {
                     color: #333;
                 }
-    
+
                 p {
                     color: $cinza-2;
                 }
             }
-    
+
             .btn {
-    
                 &.btn-check {
                     border-color: $azul;
                     color: $azul;
@@ -387,14 +380,65 @@ body {
                     &:hover {
                         background: $azul;
                         color: #fff;
-                    } 
+                    }
                 }
             }
         }
     }
 }
 
+.box-km {
+    background: $azul;
+    border-radius: 0.4rem;
 
+    .km-divTop {
+        background: radial-gradient(50% 67.96% at 50% 38.39%, #ffffff 0%, #eaeaeb 100%);
+        border-radius: 0.3rem 0.3rem 0 0;
+        padding: 1.8rem 1rem;
+
+        .km-title {
+            color: $cinza-2;
+            font-family: $fonte-semibold;
+            font-size: 1.35em;
+            margin: 0;
+        }
+
+        .km-number {
+            font-family: $fonte-digital;
+            margin: 2rem 0 0;
+            color: $azul;
+            font-size: 2.6em;
+            line-height: 1;
+
+            span {
+                border: solid 2px #BEBEBE;
+                border-radius: .3rem;
+                margin: 0 .06em;
+                padding: 0 .25rem;
+            }
+        }
+
+    }
+
+    .km-link {
+        color: $amarelo;
+        width: 50%;
+        margin: 0 auto;
+        display: inline-block;
+        line-height: 1.5;
+        border: solid 1px $amarelo;
+        padding: .4rem .6rem;
+        border-radius: .3rem;
+        font-size: .9em;
+        margin: 2rem 0;
+
+        &:hover {
+            text-decoration: none;
+            background: $amarelo;
+            color: $azul;
+        }
+    }
+}
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
@@ -402,20 +446,18 @@ body {
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-  .body-card {
+    .body-card {
         padding: 1.8rem 1.6em 2.5em 0 !important;
     }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-    
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
 }
-
 
 @media (max-width: 768px) {
     .sidebar {
@@ -431,5 +473,4 @@ body {
     // .content.active {
     //     width: calc(100% - 270px);
     // }
-
 }

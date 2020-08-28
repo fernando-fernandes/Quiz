@@ -34,11 +34,12 @@
 
 <body>
     <div class="wrapper">
-
+        <button type="button" class="sidebar-btn"><i class="fal fa-bars"></i></button>
         <div class="sidebar">
-            <a href="" class="logo">
+            <button type="button" class="sidebar-btn"><i class="fal fa-bars"></i></button>
+            <span class="logo">
                 <img src="images/Logo-mobil.svg" alt="Logo Mobil">
-            </a>
+            </span>
 
             <div class="container-menu d-flex justify-content-center">
                 <ul>
@@ -170,7 +171,14 @@
                             </div>
 
                             <div class="col-md-4 col-12 text-center">
-                                <img src="images/img-quiz.png" class="img-fluid rounded">
+                                <!-- <img src="images/img-quiz.png" class="img-fluid rounded"> -->
+                                <div class="box-km">
+                                    <div class="km-divTop">
+                                        <h5 class="km-title">KM conquistados</h5>
+                                        <p class="km-number">34569</p>
+                                    </div>
+                                    <a class="km-link" href="">Veja no mapa onde você chegou</a>
+                                </div>
                             </div>
                         </div>
 
@@ -233,13 +241,13 @@
                         break;
                     case "m1a":
                         include_once("mod1a.php");
-                        break;                                
+                        break;
                     case "m2":
                         include_once("mod2.php");
                         break;
                     case "m2a":
                         include_once("mod2a.php");
-                        break;                                
+                        break;
                     case "e1":
                         include_once("extra1.php");
                         break;
