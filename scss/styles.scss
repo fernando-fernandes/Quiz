@@ -390,6 +390,7 @@ body {
 .box-km {
     background: $azul;
     border-radius: 0.4rem;
+    max-width: 17rem;
 
     .km-divTop {
         background: radial-gradient(50% 67.96% at 50% 38.39%, #ffffff 0%, #eaeaeb 100%);
@@ -428,7 +429,7 @@ body {
         line-height: 1.5;
         border: solid 1px $amarelo;
         padding: .4rem .6rem;
-        border-radius: .3rem;
+        border-radius: .2rem;
         font-size: .9em;
         margin: 2rem 0;
 
