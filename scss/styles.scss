@@ -8,6 +8,11 @@ body {
     font-family: $fonte-regular;
 }
 
+
+body {
+    position: relative;
+}
+
 @mixin icon($color, $background, $fontSize, $iconSize) {
     width: $iconSize;
     height: $iconSize;
@@ -25,17 +30,37 @@ body {
     width: 100%;
 }
 
+.sidebar-btn{
+    position: absolute;
+    top: 1.8rem;
+    left: .2em;
+    border: none;
+    background: none;
+    font-size: 1.5em;
+    color: $cinza-1;
+    z-index: 99;
+
+    &:active, &:focus {
+        outline: none;
+    }
+}
+
+
 .sidebar {
     padding: 0;
-    width: 250px;
+    width: 270px;
     position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
     z-index: 999;
     transition: all 0.3s;
-    $logo-height: 4.5rem;
     overflow-y: auto;
+    $logo-height: 5.4rem;
+
+    &.active {
+        margin-left: -270px;
+    }
 
     .logo {
         display: flex;
@@ -44,8 +69,9 @@ body {
         height: $logo-height;
 
         img {
-            width: 9em;
+            width: 6em;
         }
+
     }
 
     .container-menu {
@@ -109,48 +135,63 @@ body {
                         font-size: 0.85rem;
                         font-family: $fonte-regular;
                     }
-                }
 
-                .icon-lock {
-                    display: none;
-                }
-
-                &.nav-disabled {
-                    i {
-                        color: rgba(255, 255, 255, 0.45) !important;
+                    .icon-lock {
+                        display: none;
                     }
-
-                    a {
+    
+                    &.nav-disabled {
                         cursor: default;
+
+                        i {
+                            color: rgba(255, 255, 255, 0.45) !important;
+                        }
 
                         span,
                         &:hover span {
                             color: rgba(255, 255, 255, 0.45) !important;
                         }
-                    }
-
-                    .icon-default {
-                        display: none;
-                    }
-
-                    .icon-lock {
-                        display: inline-block;
+                        .icon-default {
+                            display: none;
+                        }
+    
+                        .icon-lock {
+                            display: inline-block;
+                        }
                     }
                 }
+
+                
             }
         }
     }
 }
 
 .content {
-    width: calc(100% - 250px);
-    padding: 40px;
+    width: calc(100% - 270px);
     min-height: 100vh;
     transition: all 0.3s;
     position: absolute;
-    top: 0;
     right: 0;
+    // padding: 60px 0 20px;
+    padding: 0;
+
+    &.active {
+        width: 100%;
+    }
 }
+
+#content {
+    .universal {
+        left: 0 !important;
+    }
+}
+
+.container-ppt {
+    display: flex;
+    justify-content: center;
+}
+
 
 .quizCard {
     background-image: $bg-quiz-2;
@@ -161,7 +202,7 @@ body {
     width: 90%;
     box-shadow: $sombra-quiz;
     border-radius: 0.4rem;
-    margin: 1rem 0;
+    // margin: 20rem 0 0;
 
     .title-card {
         background: #fff;
@@ -205,7 +246,7 @@ body {
 
         .question {
             color: #fff;
-            font-size: 0.95em;
+            font-size: .95em;
             line-height: 1.3;
             margin-bottom: 2rem;
         }
@@ -217,7 +258,7 @@ body {
 
         .custom-control-label::before,
         .custom-control-label::after {
-            top: 0;
+            top: 0
         }
 
         .custom-control {
@@ -229,10 +270,10 @@ body {
             border: 1px solid #d8d8d8;
             box-sizing: border-box;
             box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.25);
-            padding: 0.8rem 1rem;
-            border-radius: 0.3rem;
-            margin: 0.7rem 0;
-            font-size: 0.9rem;
+            padding: .8rem 1rem;
+            border-radius: .3rem;
+            margin: .7rem 0;
+            font-size: .9rem;
             vertical-align: middle;
             line-height: 1.2;
         }
@@ -248,26 +289,26 @@ body {
 
             p {
                 color: #fff;
-                font-size: 0.8em;
+                font-size: .8em;
                 line-height: 1.1;
             }
         }
 
         .btn {
-            background: #ebebeb;
+            background: #EBEBEB;
             border-radius: 5rem;
             padding: 0;
             font-family: $fonte-semibold;
-            font-size: 0.85em;
+            font-size: .85em;
             height: 2rem;
             padding: 0 1rem;
             transition: $transition;
             color: $azul;
-            border: solid 1px #ebebeb;
-            letter-spacing: 0.032rem;
+            border: solid 1px #EBEBEB;
+            letter-spacing: .032rem;
 
             &:hover {
-                opacity: 0.8;
+                opacity: .8;
             }
 
             &.btn-check {
@@ -353,21 +394,42 @@ body {
     }
 }
 
+
+
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-    .body-card {
+  .body-card {
         padding: 1.8rem 1.6em 2.5em 0 !important;
     }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
+    
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
+}
+
+
+@media (max-width: 768px) {
+    .sidebar {
+        margin-left: -270px;
+        // position: absolute;
+    }
+    .sidebar.active {
+        margin-left: 0;
+    }
+    .content {
+        width: 100%;
+    }
+    // .content.active {
+    //     width: calc(100% - 270px);
+    // }
+
 }
