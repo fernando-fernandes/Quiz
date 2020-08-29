@@ -412,13 +412,12 @@ body {
             line-height: 1;
 
             span {
-                border: solid 2px #BEBEBE;
-                border-radius: .3rem;
-                margin: 0 .06em;
-                padding: 0 .25rem;
+                border: solid 2px #bebebe;
+                border-radius: 0.3rem;
+                margin: 0 0.06em;
+                padding: 0 0.25rem;
             }
         }
-
     }
 
     .km-link {
@@ -428,15 +427,121 @@ body {
         display: inline-block;
         line-height: 1.5;
         border: solid 1px $amarelo;
-        padding: .4rem .6rem;
-        border-radius: .2rem;
-        font-size: .9em;
+        padding: 0.4rem 0.6rem;
+        border-radius: 0.2rem;
+        font-size: 0.9em;
         margin: 2rem 0;
 
         &:hover {
             text-decoration: none;
             background: $amarelo;
             color: $azul;
+        }
+    }
+}
+
+.div-ranking {
+    position: relative;
+    border: 1px solid #bbd5fc;
+    padding: 1rem;
+    background: radial-gradient(50% 67.96% at 50% 38.39%, #ffffff 0%, #eaeaeb 100%);
+    border-radius: 0.3rem;
+    margin: 2.5rem 0 0;
+    text-align: center;
+
+    .num-ranking {
+        $size: 3.2rem;
+
+        font-family: $fonte-bold;
+        color: #fff;
+        font-size: 1.4em;
+        background: $azul;
+        width: $size;
+        height: $size;
+        border-radius: $size / 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: solid 4px #fff;
+        position: absolute;
+        top: -$size / 2;
+        left: 50%;
+        transform: translateX(-50%);
+        user-select: none;
+    }
+
+    .img-ranking {
+        $width: 50%;
+
+        width: $width;
+        margin: 2.4rem auto 0;
+        display: block;
+
+        &.prata {
+            width: $width - 10%;
+        }
+
+        &.bronze {
+            width: $width - 20%;
+        }
+    }
+
+    .participantes {
+        // white-space: nowrap;
+        border: none;
+        background: transparent;
+        color: $azul;
+        font-size: 0.85em;
+        padding: 0.4rem 0.6rem;
+        border-radius: .25rem;
+        margin: 2.2rem 0;
+        outline: none;
+
+        &:hover {
+            background: #dddcdc;
+            // color: #fff;
+            text-decoration-color: $azul;
+        }
+    }
+
+    .pontos-ranking {
+        font-size: 1.3em;
+        font-family: $fonte-bold;
+        width: 100%;
+        height: 2.8rem;
+        border: solid 1px $azul;
+        border-radius: 0.3rem;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $azul;
+        line-height: 1;
+        position: relative;
+
+        span {
+            background: #fe000c;
+            font-family: $fonte-semibold;
+            color: #fff;
+            position: absolute;
+            top: -0.62rem;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.58em;
+            padding: 0.13rem 0.8rem;
+            border-radius: 2rem;
+            line-height: 1;
+            white-space: nowrap;
+        }
+    }
+
+    &.outro-ranking {
+        .num-ranking {
+            background: #6b9fea;
+        }
+
+        .participantes {
+            margin: 4.8rem 0;
         }
     }
 }
@@ -453,7 +558,8 @@ body {
 }
 
 // Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
+@media (max-width: 992px) {
+
 }
 
 // Extra large devices (large desktops, 1200px and up)
@@ -474,4 +580,18 @@ body {
     // .content.active {
     //     width: calc(100% - 270px);
     // }
+    .div-ranking {
+        .img-ranking {
+            $width: 32%;
+            width: $width;
+
+            &.prata {
+                width: $width - 8%;
+            }
+
+            &.bronze {
+                width: $width - 18%;
+            }
+        }
+    }
 }
