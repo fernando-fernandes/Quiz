@@ -577,9 +577,7 @@ body {
     .content {
         width: 100%;
     }
-    // .content.active {
-    //     width: calc(100% - 270px);
-    // }
+    
     .div-ranking {
         .img-ranking {
             $width: 32%;
@@ -592,6 +590,18 @@ body {
             &.bronze {
                 width: $width - 18%;
             }
+        }
+    }
+
+    body {
+        position: static !important;
+    }
+
+    #content {
+        margin-top: 1rem;
+
+        .universal-layout, .universal-tablet {
+            height: initial;
         }
     }
 }
