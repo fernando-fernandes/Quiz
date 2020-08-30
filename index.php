@@ -175,7 +175,7 @@
                                 <div class="box-km">
                                     <div class="km-divTop">
                                         <h5 class="km-title">KM conquistados</h5>
-                                        <p class="km-number">34569</p>
+                                        <p class="km-number">341691</p>
                                     </div>
                                     <a class="km-link" href="">Veja no mapa onde você chegou</a>
                                 </div>
@@ -234,7 +234,7 @@
                 $par = $_GET["p"];
                 switch ($par) {
                     case "m0":
-                        include_once("home.html");
+                        include_once("index-sb.html");
                         break;
                     case "m1":
                         include_once("index-sb.html");
