@@ -547,7 +547,7 @@ body {
 }
 
 // Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
+@media (max-width: 576px) {
 }
 
 // Medium devices (tablets, 768px and up)
@@ -559,7 +559,13 @@ body {
 
 // Large devices (desktops, 992px and up)
 @media (max-width: 992px) {
+    #content {
+        margin-top: 1rem;
 
+        .universal-layout, .universal-tablet {
+            height: initial;
+        }
+    }
 }
 
 // Extra large devices (large desktops, 1200px and up)
@@ -598,10 +604,18 @@ body {
     }
 
     #content {
-        margin-top: 1rem;
+        // margin-top: 1rem;
 
-        .universal-layout, .universal-tablet {
-            height: initial;
+        // .universal-layout, .universal-tablet {
+        //     height: initial;
+        // }
+
+        .universal_mini {
+            position: relative;
+        }
+
+        #playerView {
+            top: 0
         }
     }
 }
