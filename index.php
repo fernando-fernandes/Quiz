@@ -174,8 +174,9 @@
                                 <!-- <img src="images/img-quiz.png" class="img-fluid rounded"> -->
                                 <div class="box-km">
                                     <div class="km-divTop">
-                                        <h5 class="km-title">KM conquistados</h5>
-                                        <p class="km-number">341691</p>
+                                        <h5 class="km-title">Conquistas</h5>
+                                        <p class="km-number d-inline-block">34167</p>
+                                        <span class="km-title">Km</span>
                                     </div>
                                     <a class="km-link" href="">Veja no mapa onde você chegou</a>
                                 </div>
